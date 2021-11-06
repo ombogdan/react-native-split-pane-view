@@ -1,0 +1,25 @@
+{
+  "name": "react-native-split-pane-view",
+  "version": "1.0.0",
+  "description": "Split pane for two window",
+  "main": "split-pane.js",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-native": "^0.63.1"
+  },
+  "peerDependencies": {
+    "react-native-app-interface": "^0.1.3"
+  },
+  "keywords": [
+    "react-native",
+    "split",
+    "pane",
+    "view"
+  ],
+  "repository": "https://github.com/ombogdan/react-native-split-pane-view",
+  "homepage": "https://github.com/ombogdan/react-native-split-pane-view#readme",
+  "bugs": {
+    "url": "https://github.com/ombogdan/react-native-split-pane-view/issues"
+  }
+}

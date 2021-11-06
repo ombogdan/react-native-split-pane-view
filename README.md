@@ -59,13 +59,13 @@ export default () => {
 
 | prop | type | required | default |
 | ---- | ---- | ----     | ----    |
-|splitSource | string | true | './assets/horizontal-split.png'|
-|splitContainerStyle | object | false | |
+|splitSource | string | false | './assets/horizontal-split.png'|
+|splitContainerStyle | object | false | {width: '100%', alignItems: "center", bottom: 5, zIndex: 2000} |
 |split  | 'h' or 'v' | false | 'h' |
 |primary  | 'first' or 'second' | false | 'first' |
 |defaultValue | number | true | |
 |min  | number | false | 0 |
-|max | number | false | |
+|max | number | false | 0|
 |onChange | (value)=>void | true | |
 |onFinish | (value)=>void | false | |
 |orientation | string | false | |

@@ -17,9 +17,17 @@
     "pane",
     "view"
   ],
-  "repository": "https://github.com/ombogdan/react-native-split-pane-view",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ombogdan/react-native-split-pane-view.git"
+  },
   "homepage": "https://github.com/ombogdan/react-native-split-pane-view#readme",
   "bugs": {
     "url": "https://github.com/ombogdan/react-native-split-pane-view/issues"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": ""
+  },
+  "author": "ombodgan"
 }

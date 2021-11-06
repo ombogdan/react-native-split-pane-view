@@ -113,7 +113,7 @@ export default (
 
     function onLayout() {
         if (dragging) return;
-        if (orientation !== 'PORTRAIT' && (Dimensions.get('window').height - 150 < primarySize)) {
+        if ((orientation ? orientation : 'PORTRAIT') !== 'PORTRAIT' && (Dimensions.get('window').height - 150 < primarySize)) {
             setPrimarySize(Dimensions.get('window').height / 2);
         }
     }
@@ -161,7 +161,7 @@ export default (
                 onDragging={onDragging}
                 startDrag={startDrag}
                 endDrag={endDrag}
-                splitSource={splitSource}
+                splitSource={splitSource ? splitSource : './assets/horizontal-split.png'}
                 splitStyle={splitStyle}
                 splitContainerStyle={splitContainerStyle}/>
             <Pane style={paneStyle}

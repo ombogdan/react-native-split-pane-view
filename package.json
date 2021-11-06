@@ -1,7 +1,7 @@
 {
   "name": "react-native-split-pane-view",
-  "version": "1.0.1",
-  "description": "Split pane for two window",
+  "version": "1.0.2",
+  "description": "Split pane component for two window in React Native",
   "main": "split-pane.js",
   "license": "MIT",
   "dependencies": {

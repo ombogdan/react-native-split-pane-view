@@ -1,6 +1,6 @@
 # react-native-split-pane-view
 
-Split pane
+Split pane component for two window in React Native
 
 # Install
 

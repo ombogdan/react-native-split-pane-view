@@ -17,7 +17,7 @@ It depends on `react-native-app-interface`, so should execute `pod install` afte
 # Usage
 
 ```jsx harmony
-import React, {PureComponent, useState} from "react";
+import React, {useState} from "react";
 import {Dimensions, View, Text} from "react-native";
 import SplitPane from 'react-native-split-pane-view';
 

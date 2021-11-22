@@ -10,22 +10,21 @@ import {
 } from 'react-native';
 
 const Pane = ({flexible = false, children, onLayout, style, secondComponent}) => {
-        return (
-            <>
-                {secondComponent === true ?
-                    <View style={[flexible ? {height: '100%'} : style]}
-                          onLayout={onLayout}>
-                        {children}
-                    </View>
-                    :
-                    <View style={[flexible ? {height: '100%'} : style]}>
-                        {children}
-                    </View>
-                }
-            </>
-        )
-    }
-;
+    return (
+        <>
+            {secondComponent === true ?
+                <View style={[flexible ? {height: '100%'} : style]}
+                      onLayout={onLayout}>
+                    {children}
+                </View>
+                :
+                <View style={[flexible ? {height: '100%'} : style]}>
+                    {children}
+                </View>
+            }
+        </>
+    )
+};
 
 let startPos = {x: 0, y: 0,};
 let dragging = false;
@@ -94,7 +93,6 @@ export default (
         splitSource,
         splitStyle,
         splitContainerStyle,
-        orientation
     }
 ) => {
 
@@ -104,24 +102,19 @@ export default (
 
     const [primarySize, setPrimarySize] = useState(value || defaultValue);
 
-    const [dragging, setDragging] = useState(false);
-
     const isHorizontal = split === 'h';
     if (isHorizontal) {
         wrapperStyle.push({flexDirection: 'row'})
     }
 
     function onLayout() {
-        if (dragging) return;
-        if ((orientation ? orientation : 'PORTRAIT') !== 'PORTRAIT' && (Dimensions.get('window').height - 150 < primarySize)) {
+        if (Dimensions.get('window').height - 150 < primarySize) {
             setPrimarySize(Dimensions.get('window').height / 2);
         }
     }
 
     function startDrag() {
-        setDragging(true);
         startSize = {[sizeKey]: primarySize}
-
     }
 
     function onDragging(offset, returnValue) {
@@ -140,7 +133,6 @@ export default (
     function endDrag(value) {
         let resultValue = onDragging(value, true)
         onFinish(resultValue, true);
-        setDragging(false);
     }
 
     useEffect(() => {
@@ -154,7 +146,6 @@ export default (
     return (
         <View style={wrapperStyle} pointerEvents={"auto"}>
             <Pane style={paneStyle}
-
                   flexible={primary !== 'first'}>{children[0]}</Pane>
             <Separator
                 honrizontal={isHorizontal}
